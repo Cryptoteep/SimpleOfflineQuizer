@@ -1,0 +1,12 @@
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\bin\Debug\QuizVirew.exe.config
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\bin\Debug\QuizVirew.exe
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\bin\Debug\QuizVirew.pdb
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\bin\Debug\QuizLibrary.dll
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.csproj.AssemblyReference.cache
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.Form1.resources
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.Properties.Resources.resources
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.csproj.GenerateResource.cache
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.csproj.CoreCompileInputs.cache
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.csproj.CopyComplete
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.exe
+C:\Users\vasya\Desktop\SimpleOfflineQuizer\QuizVirew\obj\Debug\QuizVirew.pdb
