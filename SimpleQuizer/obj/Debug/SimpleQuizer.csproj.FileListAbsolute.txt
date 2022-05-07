@@ -16,3 +16,9 @@ D:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.csproj.AssemblyRef
 D:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.csproj.CoreCompileInputs.cache
 D:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.dll
 D:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.pdb
+H:\C#\SimpleOfflineQuizer\SimpleQuizer\bin\Debug\SimpleQuizer.dll
+H:\C#\SimpleOfflineQuizer\SimpleQuizer\bin\Debug\SimpleQuizer.pdb
+H:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.csproj.AssemblyReference.cache
+H:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.csproj.CoreCompileInputs.cache
+H:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.dll
+H:\C#\SimpleOfflineQuizer\SimpleQuizer\obj\Debug\SimpleQuizer.pdb

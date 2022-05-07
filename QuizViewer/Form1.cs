@@ -13,13 +13,54 @@ namespace SimpleQuizer.Viewer
 {
     public partial class Form1 : Form
     {
+
+        private List<Answer>userAnswers;
+        private List<RadioButton> buttonControls;
+        private Question currentQuestion;
+
+        private Quiz currentQuiz;
+
         public Form1()
+
         {
+            userAnswers = new List<Answer>();
+            buttonControls = new List<RadioButton>();
+
             InitializeComponent();
         }
-        
-        public void ShowQuestion(Question queston)
+        private void CheckUserAnswers()
         {
+            for (int i = 0; i< userAnswers.Count; i++)
+            {
+                if(userAnswers[i].correct == true)
+                {
+                    MessageBox.Show("Valid!");
+                }
+            }
+        }
+        private void CheckQuestions()
+        {
+            GetUserInput();
+            CheckUserAnswers();
+        }
+        private void GetUserInput()
+        {
+            userAnswers.Clear();
+
+            //R button
+            for(int i=0; i <buttonControls.Count; i++)
+            {
+                if(buttonControls[i].Checked == true)
+                {
+                    userAnswers.Add(currentQuestion.Answers[i]);
+                }
+            }
+        }
+
+
+            public void ShowQuestion(Question queston)
+        {
+            currentQuestion = queston;
             questionNumberLabel.Text = "Номер" + queston.Number.ToString();
             questionTextBox.Text = queston.QuastionText;
             if(queston.Type == QuestionType.MultiChois )
@@ -34,6 +75,8 @@ namespace SimpleQuizer.Viewer
             int answerCount = queston.Answers.Count;
             tableLayoutPanel1.RowCount = answerCount;
 
+            buttonControls.Clear();
+            
             for (int i = 0; i < answerCount; i++)
             {
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100/ answerCount));
@@ -43,10 +86,11 @@ namespace SimpleQuizer.Viewer
                 t.Multiline = true;
                 t.Height = tableLayoutPanel1.GetRowHeights()[0];
                 t.Width = tableLayoutPanel1.GetColumnWidths()[1];
-                t.Text = queston.Answers[i];
+                t.Text = queston.Answers[i].text + " " + queston.Answers[i].correct.ToString();
 
                 tableLayoutPanel1.Controls.Add(t, 1, i);
                 tableLayoutPanel1.Controls.Add(r, 0, i);
+                buttonControls.Add(r);
             }
 
 
@@ -55,9 +99,34 @@ namespace SimpleQuizer.Viewer
         #region DEBUG
         private void отрытьТестовыйКвизToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Quiz q = Quiz.GetTestQuiz();
-            ShowQuestion(q.Questions[0]);
+            currentQuiz = Quiz.GetTestQuiz();
+            ShowQuestion(currentQuiz.currentQuestion);
         }
         #endregion
+
+        private void answerButtton_Click(object sender, EventArgs e)
+        {
+            CheckQuestions();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(currentQuiz != null)
+            {
+                currentQuiz.NextQuestion();
+                ShowQuestion(currentQuiz.currentQuestion);
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (currentQuiz != null)
+            {
+                currentQuiz.PriveusQuestion();
+                ShowQuestion(currentQuiz.currentQuestion);
+            }
+
+        }
     }
 }

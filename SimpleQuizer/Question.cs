@@ -14,11 +14,11 @@ namespace SimpleQuizer
 
         public int Number;
         public string QuastionText;
-        public QuestionType Type;  
-        public List<string> Answers;
+        public QuestionType Type;
+        public List<Answer> Answers;
         public Question()
         {
-            Answers = new List<string>();
+            Answers = new List<Answer>();
 
 
             

@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Answer
+public class Class1
 {
 	public Class1()
 	{
