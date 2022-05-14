@@ -16,7 +16,7 @@ namespace SimpleQuizer.Viewer
 
         private List<Answer>userAnswers;
         private List<RadioButton> buttonControls;
-        private Question currentQuestion;
+  
 
         private Quiz currentQuiz;
 
@@ -52,16 +52,16 @@ namespace SimpleQuizer.Viewer
             {
                 if(buttonControls[i].Checked == true)
                 {
-                    userAnswers.Add(currentQuestion.Answers[i]);
+                    userAnswers.Add(currentQuiz.currentQuestion.Answers[i]);
                 }
             }
         }
 
 
             public void ShowQuestion(Question queston)
-        {
-            currentQuestion = queston;
-            questionNumberLabel.Text = "Номер" + queston.Number.ToString();
+            {
+            
+            questionNumberLabel.Text = "Вопрос № " + queston.Number.ToString();
             questionTextBox.Text = queston.QuastionText;
             if(queston.Type == QuestionType.MultiChois )
             {
@@ -127,6 +127,23 @@ namespace SimpleQuizer.Viewer
                 ShowQuestion(currentQuiz.currentQuestion);
             }
 
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Quiz.GetTestQuiz2().Save("D:\\1.txt");
+        }
+
+        private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog1.ShowDialog();
+
+            if(result == DialogResult.OK)
+            {
+                currentQuiz = new Quiz();
+                currentQuiz.Load(openFileDialog1.FileName);
+            }
+            ShowQuestion( currentQuiz.currentQuestion);
         }
     }
 }

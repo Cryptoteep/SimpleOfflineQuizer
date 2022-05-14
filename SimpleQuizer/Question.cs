@@ -3,12 +3,13 @@ using System.Collections.Generic;
 
 namespace SimpleQuizer
 {
+    
     public enum QuestionType
     {
         MultiChois,
         Open
     }
-
+    [Serializable]
     public class Question
     {
 

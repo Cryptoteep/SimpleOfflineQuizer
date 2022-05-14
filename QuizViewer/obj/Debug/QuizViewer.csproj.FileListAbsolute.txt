@@ -36,3 +36,15 @@ H:\C#\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.CoreCompileInpu
 H:\C#\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.CopyComplete
 H:\C#\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.exe
 H:\C#\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.pdb
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\bin\Debug\QuizViewer.exe.config
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\bin\Debug\QuizViewer.exe
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\bin\Debug\QuizViewer.pdb
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\bin\Debug\SimpleQuizer.dll
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\bin\Debug\SimpleQuizer.pdb
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.AssemblyReference.cache
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\SimpleQuizer.Viewer.Form1.resources
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\SimpleQuizer.Viewer.Properties.Resources.resources
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.GenerateResource.cache
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.CoreCompileInputs.cache
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.exe
+D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.pdb
