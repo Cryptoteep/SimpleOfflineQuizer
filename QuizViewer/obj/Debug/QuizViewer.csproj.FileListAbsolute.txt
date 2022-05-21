@@ -48,3 +48,5 @@ D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.GenerateResou
 D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.CoreCompileInputs.cache
 D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.exe
 D:\C#\B\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.pdb
+D:\C#\SimpleOfflineQuizer\QuizViewer\obj\Debug\SimpleQuizer.Viewer.QuizResultForm.resources
+D:\C#\SimpleOfflineQuizer\QuizViewer\obj\Debug\QuizViewer.csproj.CopyComplete

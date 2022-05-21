@@ -16,18 +16,27 @@ namespace SimpleQuizer.Viewer
 
         private List<Answer>userAnswers;
         private List<RadioButton> buttonControls;
-  
+        private QuizResult validAnswer;
 
         private Quiz currentQuiz;
+        
 
         public Form1()
 
         {
             userAnswers = new List<Answer>();
             buttonControls = new List<RadioButton>();
-
+            validAnswer = new QuizResult();
             InitializeComponent();
         }
+
+        private void ShowResult()
+        {
+            validAnswer.allAnswers = currentQuiz.Questions.Count;
+            QuizResultForm f = new QuizResultForm(validAnswer);
+            f.Show();
+        }
+
         private void CheckUserAnswers()
         {
             for (int i = 0; i< userAnswers.Count; i++)
@@ -35,6 +44,13 @@ namespace SimpleQuizer.Viewer
                 if(userAnswers[i].correct == true)
                 {
                     MessageBox.Show("Valid!");
+                    validAnswer.validCountAnswer++;
+
+                }
+                if (currentQuiz.currentQuestion.Number == currentQuiz.Questions.Count)
+                {
+                    MessageBox.Show("КОнец теста");
+                    ShowResult();
                 }
             }
         }
@@ -42,6 +58,8 @@ namespace SimpleQuizer.Viewer
         {
             GetUserInput();
             CheckUserAnswers();
+            currentQuiz.NextQuestion();
+            ShowQuestion(currentQuiz.currentQuestion);
         }
         private void GetUserInput()
         {
@@ -95,6 +113,10 @@ namespace SimpleQuizer.Viewer
 
 
         }
+            
+            
+
+
 
         #region DEBUG
         private void отрытьТестовыйКвизToolStripMenuItem_Click(object sender, EventArgs e)
