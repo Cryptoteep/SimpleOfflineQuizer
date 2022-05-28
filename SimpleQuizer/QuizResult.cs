@@ -10,5 +10,7 @@ namespace SimpleQuizer
     {
         public int validCountAnswer = 0;
         public int allAnswers = 0;
+        public List<Question> quizQuestions = new List<Question>();
+        
     }
 }

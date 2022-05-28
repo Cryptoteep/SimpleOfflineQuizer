@@ -16,7 +16,7 @@ namespace SimpleQuizer.Viewer
 
         private List<Answer>userAnswers;
         private List<RadioButton> buttonControls;
-        private QuizResult validAnswer;
+        private QuizResult result;
 
         private Quiz currentQuiz;
         
@@ -26,25 +26,25 @@ namespace SimpleQuizer.Viewer
         {
             userAnswers = new List<Answer>();
             buttonControls = new List<RadioButton>();
-            validAnswer = new QuizResult();
+            result = new QuizResult();
             InitializeComponent();
         }
 
         private void ShowResult()
         {
-            validAnswer.allAnswers = currentQuiz.Questions.Count;
-            QuizResultForm f = new QuizResultForm(validAnswer);
+            result.allAnswers = currentQuiz.Questions.Count;
+            QuizResultForm f = new QuizResultForm(result);
             f.Show();
         }
 
         private void CheckUserAnswers()
         {
-            for (int i = 0; i< userAnswers.Count; i++)
+            for (int i = 0; i< currentQuiz.currentQuestion.UserAnswers.Count; i++)
             {
-                if(userAnswers[i].correct == true)
+                if(currentQuiz.currentQuestion.UserAnswers[i].correct == true)
                 {
                     MessageBox.Show("Valid!");
-                    validAnswer.validCountAnswer++;
+                    result.validCountAnswer++;
 
                 }
                 if (currentQuiz.currentQuestion.Number == currentQuiz.Questions.Count)
@@ -70,9 +70,13 @@ namespace SimpleQuizer.Viewer
             {
                 if(buttonControls[i].Checked == true)
                 {
-                    userAnswers.Add(currentQuiz.currentQuestion.Answers[i]);
+                    currentQuiz.currentQuestion.UserAnswers.Add(currentQuiz.currentQuestion.Answers[i]);
                 }
             }
+
+            result.quizQuestions.Add(currentQuiz.currentQuestion);
+
+
         }
 
 
@@ -166,6 +170,11 @@ namespace SimpleQuizer.Viewer
                 currentQuiz.Load(openFileDialog1.FileName);
             }
             ShowQuestion( currentQuiz.currentQuestion);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
